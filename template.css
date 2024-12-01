@@ -1,0 +1,154 @@
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.1;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9); /* Slight zoom-in effect */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+         url('/fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+         url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+body {
+    position: relative; /* Necessary for positioning the pseudo-element */
+    font-family: 'Gilroy', sans-serif;
+    height: 100vh; /* Full screen height */
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Create a pseudo-element for the blurred background */
+  body::before {
+    content: ''; /* Necessary for creating an empty block */
+    position: absolute; /* Position it over the body */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Flag.png');
+    background-color: #0F172A;
+    filter: blur(5px);
+    
+    z-index: -1;
+  }
+
+.navbar {
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+.navbar-nav {
+
+    margin-left: 350px;
+    
+}
+
+.navbar li {
+    padding: 15px;
+    font-size: 15px;
+   
+}
+
+.navbar li a {
+
+     color: black;
+
+}
+
+
+.navbar li:hover{
+    border-bottom: 1px solid black;
+
+}
+
+.body-container {
+
+    background-color: yellow;
+    height: 100vh;
+    
+}
+
+
+.footer-container {
+
+    height: 35vh;
+    background-color: #0F172A;
+    background-image: url('Flag.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.footer-container .footer-wrapper p{
+
+    font-size: 12px;
+
+}
+
+.footer-container .biniimg {
+
+    width: 70%;
+
+}
+
+.footer-container .footer-wrapper p span{
+
+    font-size: 14px;
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    .navbar-nav {
+    
+        margin-left: 0px;
+        
+    }
+
+    .footer-container {
+        font-size: 12px;
+        height: 100vh;
+        background-color: #0F172A;
+    
+    }
+
+    .footer-container .biniimg {
+
+        width: 30%;
+
+    }
+
+  }
