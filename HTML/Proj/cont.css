@@ -1,0 +1,8 @@
+p img {
+    width: 40px; /* Adjust image size */
+    height: 40px; /* Adjust image size */
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    
+} 

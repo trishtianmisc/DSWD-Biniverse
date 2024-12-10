@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <script>
+            function Welcome(){
+                alert("Welcome User");
+            }
+            Welcome();
+            const username = prompt("What is your name? ")
+
+            const confirmation = confirm("Are you ready to continue?");
+
+            if(confirmation){
+                alert("Thank you for your confirmation");
+            }else{
+                alert("Please try again")
+            }
+
+
+        </script>
+        <title>JAVASCRIPT ACTIVITY</title>
+        <style>
+            head{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            body{
+
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+                text-align: center;
+                margin-top: 50px;
+                background-color: rgb(139, 244, 153);
+            }
+            button{
+                border-radius: 20px;
+                margin-top: 60px;
+                padding: 50px;
+            }
+            section{
+
+                border-bottom: 20px;
+                border-bottom: 10px solid black;
+                padding: 20px;
+            }
+            button:hover{
+                background-color: aquamarine;
+            }
+            .first-section{
+                margin-top: 20px;
+
+            }
+                
+            .second-section{
+                margin-top: 100px;
+
+            }
+                
+            
+        </style>
+
+
+
+
+    </head>
+    <body>
+        
+     
+        <section>
+            <h1 class="first-section">INLINE JAVASCRIPT</h1>
+            <button onclick="alert('You clicked the button.')">IN LINE BUTTON</button>
+
+            
+        </section>
+
+        <section>
+            
+        <script>
+            function internal(){
+                alert("INTERNAL JAVASCRIPT");
+            }
+        </script>
+            <h1 class="second-section">INTERNAL JAVASCRIPT</h1>
+            <button onclick="internal()">INTERNAL BUTTON</button>
+
+        </section>
+
+        <section>
+            <h1>CHANGE BACKGROUND COLOR</h1>
+            <button onclick="changeBackground()">CLICK THIS</button>
+           
+            
+        </section>
+        <script>
+            function changeBackground(){
+                alert("BACKGROUND COLOR HAS BEEN CHANGED");
+
+                document.body.style.backgroundColor="yellow";
+            }
+        </script>
+
+        <script>
+                let num1;
+                let num2;
+                let check = false;
+                while(!check){
+                alert("Enter 2 numbers to get the sum.")
+                num1 = prompt("ENTER FIRST NUMBER: ");
+                num2 = prompt("ENTER SECOND NUMBER: ");
+                
+
+                if(isNaN(num1) || isNaN(num2) || num1 === "" || num2 === ""){
+                    alert("invalid inputs");
+                    
+                }else{
+                  
+                    check = true
+                }
+
+            }
+            const answer = parseInt(num1) + parseInt(num2);
+            alert("THE SUM IS " + answer);
+           
+        </script>
+
+        <section>
+            <p id="paragraph">One can cook on and with an open fire. 
+                These are some of the ways to cook with fire outside. Cooking meat using a spit is a great way to evenly cook meat. 
+                In order to keep meat from burning, it's best to slowly rotate it. 
+                Hot stones can be used to toast bread. Coals are hot and can bring things to a boil quickly. 
+                If one is very adventurous, one can make a hole in the ground, fill it with coals and place foil-covered meat, veggies, and potatoes into the coals, and cover all of it with dirt. 
+                In a short period of time, the food will be baked. 
+                Campfire cooking can be done in many ways.</p>
+            <button onclick="newParagraph()">CHANGE TEXT</button>
+            <script>
+                function newParagraph(){
+
+                    document.getElementById("paragraph").innerText = "That was so hot!";
+                }
+            </script>
+        </section>
+    
+        <script>
+            let userAge
+            let confirmAge = false
+            while (!confirmAge){
+               
+                 userAge = parseInt(prompt("Enter your age: "));
+                 confirms = confirm("Is the age you entered correct?");
+
+
+                 if(isNaN(userAge)){
+                   
+                    alert("invalid age");
+                 }else if (!confirms){
+                    alert("please try again");
+                 }else{
+                    confirmAge = true
+
+                 }
+
+
+
+            }
+
+            alert("THANK YOU FOR CONFIRMING YOUR AGE");
+
+                
+
+                
+        </script>
+
+
+    </body>
+</html>
